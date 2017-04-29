@@ -27,6 +27,12 @@ class Vector:
         z_theta = acos(self.z / self.magnitude())
         return [x_theta, y_theta, z_theta]
 
+    def unit_vector(self):
+        unit_x = self.x / self.magnitude()
+        unit_y = self.y / self.magnitude()
+        unit_z = self.z / self.magnitude()
+        return Vector(unit_x, unit_y, unit_z)
+
 
 def dot_product(v1: Vector, v2: Vector):
     return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z
