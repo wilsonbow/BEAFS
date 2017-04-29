@@ -2,10 +2,10 @@
 Source code for the engineering classes and functions in BEAFS.
 """
 
-__author__ = "Wilson G. Bow"
-
 from math import sqrt
 from math import acos
+
+__author__ = "Wilson G. Bow"
 
 
 class Vector:
@@ -14,6 +14,9 @@ class Vector:
         self.x = x
         self.y = y
         self.z = z
+
+    def __str__(self):
+        return "<{}, {}, {}>".format(self.x, self.y, self.z)
 
     def magnitude(self):
         return sqrt(self.x ** 2 + self.y ** 2 + self.z ** 2)
